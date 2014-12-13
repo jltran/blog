@@ -1,0 +1,16 @@
+{
+  "main-nav": [
+    {
+     "order": 1,
+     "id": "1",
+     "label": "Link1",
+     "link": "#"
+    },
+    {
+     "order": 2,
+     "id": "2",
+     "label": "Link2",
+     "link": "#"
+    }
+  ]
+}

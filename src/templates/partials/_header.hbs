@@ -1,0 +1,14 @@
+<header>
+   <div class="header-container">
+        <h1>Site Title</h1>
+
+        <nav>
+            <ul>
+                {{#each navigation.main-nav}}
+                    <li><a href="{{link}}" class="nav-link">{{label}}</a></li>
+                {{/each}}        
+            </ul>
+        </nav>
+    </div>
+
+</header>

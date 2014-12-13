@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} | {{site.title}}</title>
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700|Titillium+Web:400' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{assets}}/css/app.css">
+
+  </head>
+  <body>
+    
+    <main id="main" role="main">
+        {{> _header}}
+        {{> _sidebar}}
+        <div class="content">
+            {{> body }}
+        </div>
+    </main>
+
+  <script src="{{assets}}/js/app.js"></script>
+  </body>
+</html>
