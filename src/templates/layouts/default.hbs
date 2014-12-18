@@ -6,20 +6,29 @@
     <title>{{title}} | {{site.title}}</title>
 
     <!-- CSS -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
+    -->
+    <link href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link
+  href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT'
+  rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{assets}}/css/main.css">
 
   </head>
   <body>
-    
+
     <main id="main" role="main">
         {{> _header}}
-        {{> _sidebar}}
         <div class="content">
             {{> body }}
         </div>
     </main>
 
+    {{> _footer}}
   <script src="{{assets}}/js/app.js"></script>
   </body>
 </html>

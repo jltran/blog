@@ -76,11 +76,11 @@ module.exports = function(grunt) {
       
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{layouts,pages,partials}/{,*/_}*.{md,hbs,yml}'],
+        files: ['<%= config.src %>/**/*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
       sass: {
-        files: '<%= config.src %>/stlyes/*.sass',
+        files: '<%= config.src %>/styles/**/*.{sass,scss}',
         tasks: ['sass']
       },
       cssmin: {

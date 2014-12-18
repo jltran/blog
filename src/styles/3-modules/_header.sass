@@ -1,0 +1,66 @@
+@import '../1-tools/bourbon/bourbon'
+@import '../1-tools/neat/neat'
+
+header
+    $header-background: white
+    $header-color: #666666
+    $header-link-color: transparentize($header-color, .2)
+    $header-hover-color: transparentize(#E65100, .4)
+    
+    position: fixed
+    background: transparentize($header-background, .1)
+    top: 0
+    left: 0
+    right: 0
+    height: 2*$base-spacing
+    z-index: 800
+    .top-header
+        width: 90%
+        height: 100%
+        margin: 0 auto
+        
+        .logo-block
+            float: left
+            width: 50%
+            height: 100%
+            #logo a
+                display: block
+                font-family: Amaranth
+                float: left
+        .nav-block
+            float: left
+            width: 50%
+            height: 100%
+            ul
+                display: none
+                list-style: none
+                float: right
+                line-height: 3em
+                li
+                    display: inline-block
+                    padding: 0 0.25em
+                    a    
+                        color: $header-link-color
+                        &:hover
+                            color: transparentize($header-hover-color, 0)
+
+            nav
+                float: right
+                overflow: hidden
+                width: auto
+                a
+                    text-decoration: none
+                    line-height: 3em
+                    padding: 0 0.25em
+                    color: $header-link-color
+                    &:hover
+                        color: transparentize($header-hover-color, 0)
+        
+        @include media(em(700))
+            ul
+                display: inline-block !important
+            nav
+                float: left !important
+                a
+                    padding: 0 0.5em !important
+                

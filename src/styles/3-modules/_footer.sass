@@ -1,0 +1,80 @@
+@import '../1-tools/bourbon/bourbon'
+@import '../1-tools/neat/neat'
+
+.footer 
+  $footer-background: white
+  $footer-color: #888888
+  $footer-link-color: transparentize($footer-color, .2)
+  $footer-hover-color: transparentize(#E65100, .4)
+
+  background: $footer-background
+  border-top: 1px solid rgba(109, 110, 113, 0.25)
+
+  .footer-links 
+    width: 90%
+    margin: 0 auto
+    @include clearfix      
+        
+  /* FOOTER BOX MODEL ================================= */  
+  .footer-block
+    float: left
+    padding: $base-spacing 1em $base-spacing null
+    width: 100%
+
+  @include media($medium-screen)
+    .contact-info, .narcissism
+      width: 66.66%
+    .project, .social
+      width: 33.33%
+    
+  @include media(em(1300))
+    .footer-block
+      padding: $base-spacing*2 1.5em $base-spacing*2 2em
+    .footer-block:first-child
+      padding: $base-spacing*2 0 $base-spacing*2 2em
+    .contact-info, .project
+      width: 25%
+    .narcissism
+      width: 35%
+    .social
+      width: 15%
+    
+  /* FOOTER BLOCK STYLINGS ============================= */    
+  .footer-block h3
+    color: $footer-color
+    font-size: 1em
+    font-weight: 800
+    margin-bottom: .4em
+
+  p, li a
+    color: $footer-link-color
+    margin-bottom: 0
+    &:hover
+      color: transparentize($footer-color, 0)
+
+  li a
+    &:hover
+      color: $footer-hover-color
+    
+  .narcissism p
+    float: left
+    width: 50%
+    
+  .my-face
+    float: left
+    max-width: 100px
+    max-height: 100px
+    border-radius: 5px 40px 5px
+    margin-left: 15px
+    border: 1px solid rgba(109, 110, 113, 0.25)
+    margin-top: -1.5em
+    opacity: 0.9
+    
+  @include media($medium-screen)
+    .narcissism p
+      width: 66%
+      
+  
+
+
+  
