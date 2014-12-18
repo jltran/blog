@@ -6,46 +6,100 @@
     <title>Home | Random Text</title>
 
     <!-- CSS -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
+    -->
+    <link href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link
+  href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT'
+  rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/main.css">
 
   </head>
   <body>
-    
+
     <main id="main" role="main">
         <header>
-   <div class="header-container">
-        <!--<h1>Site Title</h1>-->
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos culpa assumenda fugit, voluptatem enim eaque cum nam omnis, officiis, at dicta esse distinctio. Voluptate illum quia, assumenda eum quod, quidem vel aut autem ea libero saepe nisi dolorum repellat totam ipsum alias est dignissimos consectetur sint reiciendis nemo! Voluptatum ab sit neque, pariatur illum? Veniam nemo fugit distinctio explicabo, quaerat a. Omnis pariatur explicabo ipsam iusto veritatis doloribus, ullam quaerat excepturi. Eius, atque, placeat. Voluptate neque suscipit consequuntur, facilis rem sit quia, repudiandae maiores cupiditate rerum hic officiis. Sit tempora repudiandae, maxime? Ad quis, dignissimos delectus, accusantium obcaecati molestias explicabo? Enim numquam aliquid sequi, deserunt, voluptate temporibus animi ea. Cumque.
-    </div>
-
-</header>
-        <div id="sidebar" class="container">
-    <div class="row">
-        <div id="logo">
-            <h1>RANDOM</h1>
-            <h1>TEXT</h1>
+  <div class="top-header">
+        <div class="logo-block">
+            <h1 id="logo"><a href="#" title="Back to home page">JLT</a></h1>
         </div>
-    </div>
-   
-    <hr>
-    
-</div>
+        <div class="nav-block">
+            <ul class="social-media">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+
+            <nav>
+                <a href="#">blog</a>
+                <a href="#">work</a>
+                <a href="#">data</a>
+                <a href="#">about</a>
+            </nav>
+        </div>
+  </div>
+</header>
         <div class="content">
             
 
+<!--
 <div class="post-content">
-    <hr>
-<p>title: YAML Front Matter
-description: A very simple way to add structured data to a page.</p>
-<h2 id="date-2013-07-04">date: 2013-07-04</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui iste, eligendi labore! Dolores, fuga odit quos officiis itaque officia dicta expedita fugit doloribus vel, et autem voluptas, atque perspiciatis nostrum in! Ipsa et, expedita voluptate consectetur odit nam dolorem ex dolores animi similique quam recusandae minima porro a nisi? Repellendus sapiente accusamus ullam voluptatibus doloribus neque dicta, id perferendis nostrum vel, similique repellat quia vero quidem, ex reiciendis. Voluptate inventore minima temporibus ullam fuga corporis, ratione quam fugit id neque cupiditate debitis consequatur asperiores laudantium eum nam, perferendis adipisci, eius. Molestiae animi officia, repudiandae itaque, voluptatem dolore quis eligendi, numquam excepturi nostrum fugit dolor. Reprehenderit beatae, ea excepturi veritatis atque perferendis laudantium aliquam et officiis nemo deserunt aliquid amet quae molestiae ut ad pariatur at quibusdam error. Assumenda veniam labore tempora! Minima doloremque excepturi id nobis fuga, error, totam quaerat! Accusantium molestiae hic voluptas eius fugiat, dolor aperiam odio sunt placeat non repellendus itaque in maiores illum sequi, iure consectetur natus eaque vel exercitationem odit adipisci labore. Expedita, ut amet, rem quaerat a quibusdam inventore numquam veritatis similique facilis! Ipsam expedita facere blanditiis reiciendis laboriosam excepturi fuga sapiente ex in consequuntur libero praesentium corporis dolorum perferendis, nesciunt, optio nihil inventore dolores nemo sunt labore sequi corrupti unde. Perferendis excepturi saepe libero illum quis atque, aperiam est amet, ut et sequi sed reiciendis asperiores quae, numquam? Error cumque soluta quod libero aperiam atque quos, nemo consequatur mollitia est, maiores sequi. Ducimus deserunt, mollitia aperiam cumque minima nihil consequatur non praesentium voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui iste, eligendi labore! Dolores, fuga odit quos officiis itaque officia dicta expedita fugit doloribus vel, et autem voluptas, atque perspiciatis nostrum in! Ipsa et, expedita voluptate consectetur odit nam dolorem ex dolores animi similique quam recusandae minima porro a nisi? Repellendus sapiente accusamus ullam voluptatibus doloribus neque dicta, id perferendis nostrum vel, similique repellat quia vero quidem, ex reiciendis. Voluptate inventore minima temporibus ullam fuga corporis, ratione quam fugit id neque cupiditate debitis consequatur asperiores laudantium eum nam, perferendis adipisci, eius. Molestiae animi officia, repudiandae itaque, voluptatem dolore quis eligendi, numquam excepturi nostrum fugit dolor. Reprehenderit beatae, ea excepturi veritatis atque perferendis laudantium aliquam et officiis nemo deserunt aliquid amet quae molestiae ut ad pariatur at quibusdam error. Assumenda veniam labore tempora! Minima doloremque excepturi id nobis fuga, error, totam quaerat! Accusantium molestiae hic voluptas eius fugiat, dolor aperiam odio sunt placeat non repellendus itaque in maiores illum sequi, iure consectetur natus eaque vel exercitationem odit adipisci labore. Expedita, ut amet, rem quaerat a quibusdam inventore numquam veritatis similique facilis! Ipsam expedita facere blanditiis reiciendis laboriosam excepturi fuga sapiente ex in consequuntur libero praesentium corporis dolorum perferendis, nesciunt, optio nihil inventore dolores nemo sunt labore sequi corrupti unde. Perferendis excepturi saepe libero illum quis atque, aperiam est amet, ut et sequi sed reiciendis asperiores quae, numquam? Error cumque soluta quod libero aperiam atque quos, nemo consequatur mollitia est, maiores sequi. Ducimus deserunt, mollitia aperiam cumque minima nihil consequatur non praesentium voluptate.</p>
+<p>Additional text to be added so that it makes sense</p>
 
 </div>
+-->
 
+<article class="type-system-sans">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
         </div>
     </main>
 
+    <footer class="footer">
+  <div class="footer-links">
+    <div class="footer-block contact-info">
+        <h3>Contact</h3>
+        <p>a: 2339 durant ave. berkeley, ca 94704</p>
+        <p>p: 510 480 0040</p>
+        <p>e: jason.tran@berkeley.edu</p>
+    </div>
+    <div class="footer-block project">
+        <h3>Plan a project</h3>
+        <p>Do you have a project in mind? Click here to contact me!</p>
+    </div>
+    <div class="footer-block narcissism">
+        <h3>Slice of Narcissism</h3>
+        <p>Jason is a full-stack developer living in Oakland, CA. He is fond of rainbows and sunshine. <a href="#">Find out more ></a></p>
+        <img class="my-face" src="assets/images/me.png" alt="my face - sorry for the poor quality">
+    </div>
+    
+    <div class="footer-block social">
+        <ul>
+            <li><a href="#"><i class="fa fa-twitter"></i>   Twitter</a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i>   Google Plus</a></li>
+            <li><a href="#"><i class="fa fa-github"></i>   Github</a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i>   Dribbble</a></li>
+        </ul>
+    </div>
+    
+  </div>
+</footer>
   <script src="assets/js/app.js"></script>
   </body>
 </html>
