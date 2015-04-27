@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lists and things thta are used in the supermarket | Jason L. Tran</title>
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+  </head>
+  <body>
+    <header>
+  <div class="top-header">
+        <div class="logo-block">
+            <h1 id="logo"><a href="/" title="Back to home page">JLT</a></h1>
+        </div>
+        <div class="nav-block">
+            <ul class="social-media">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+
+            <nav>
+                
+                  <a href="/">blog</a>
+                
+                  <a href="/work.html">work</a>
+                
+                  <a href="/data.html">data</a>
+                
+                  <a href="/about.html">about</a>
+                
+            </nav>
+        </div>
+  </div>
+</header>
+    <main id="main" role="main">
+        
+        <div class="content">
+          <div class="page-content">
+          <div class="title-content">
+            
+            <div class="hero-container">
+               <h1>lists and things thta are used in the supermarket</h1>
+                <div style="background-image: url('../assets/images/windmill.jpg'); background-size: cover;" class="hero-picture"></div>
+            </div>
+            
+
+            
+            <span class="small-caps">Posted 7 months ago</span>
+          </div>
+          <div class="post">
+            <h2 id="lists">Lists</h2>
+<h3 id="unordered">Unordered</h3>
+<p>A list of items in which the order does not explicitly matter.</p>
+<pre><code class="language-markdown"><span class="bullet">* </span>Lorem ipsum dolor sit amet
+<span class="bullet">* </span>Consectetur adipiscing elit
+<span class="bullet">* </span>Integer molestie lorem at massa
+<span class="bullet">* </span>Facilisis in pretium nisl aliquet
+<span class="bullet">* </span>Nulla volutpat aliquam velit
+  * Phasellus iaculis neque
+  * Purus sodales ultricies
+  * Vestibulum laoreet porttitor sem
+  * Ac tristique libero volutpat at
+<span class="bullet">* </span>Faucibus porta lacus fringilla vel
+<span class="bullet">* </span>Aenean sit amet erat nunc
+<span class="bullet">* </span>Eget porttitor lorem</code></pre>
+<p>Renders to:</p>
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+<p>And this HTML</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit
+    &lt;ul&gt;
+      &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+      &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+      &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+      &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h3 id="ordered">Ordered</h3>
+<p>A list of items in which the order does explicitly matter.</p>
+<pre><code class="language-markdown"><span class="bullet">1. </span>Lorem ipsum dolor sit amet
+<span class="bullet">2. </span>Consectetur adipiscing elit
+<span class="bullet">3. </span>Integer molestie lorem at massa
+<span class="bullet">4. </span>Facilisis in pretium nisl aliquet
+<span class="bullet">5. </span>Nulla volutpat aliquam velit
+<span class="bullet">6. </span>Faucibus porta lacus fringilla vel
+<span class="bullet">7. </span>Aenean sit amet erat nunc
+<span class="bullet">8. </span>Eget porttitor lorem</code></pre>
+<p>Renders to:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<p>And this HTML:</p>
+<pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      
+          </div>
+          </div>
+        </div>
+    </main>
+
+  <script src="../assets/js/app.js"></script>
+  </body>
+</html>
