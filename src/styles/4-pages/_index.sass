@@ -1,0 +1,35 @@
+.intro-text
+    width: 30%
+    float: left
+    display: none
+
+.front-page-content
+    width: 100%
+    float: left
+
+.blog-post
+    @include clearfix
+    
+.post-title
+    width: 71.43%
+    float: left
+    margin-bottom: 1.4em
+    
+.dates
+    width: 28.57%
+    float: left
+
+.date
+    float: right
+    margin-right: 1.6*$base-spacing
+    
+@include media($medium-screen)
+    .intro-text
+        display: block
+    
+    .front-page-content
+        width: 70%
+        margin-top: 2.5*$base-spacing
+        margin-bottom: $base-spacing
+        
+    

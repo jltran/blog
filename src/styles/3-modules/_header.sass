@@ -7,15 +7,16 @@ header
     $header-link-color: transparentize($header-color, .2)
     $header-hover-color: transparentize(#E65100, .4)
     
+    box-shadow: 0 0.5px 0 0 #ffffff inset, 0 0.1px 0.2px 0 $header-link-color   
     position: fixed
     background: transparentize($header-background, .1)
     top: 0
     left: 0
     right: 0
-    height: 2*$base-spacing
+    height: 1.5*$base-spacing
     z-index: 800
     .top-header
-        width: 90%
+        width: 80%
         height: 100%
         margin: 0 auto
         
@@ -27,6 +28,7 @@ header
                 display: block
                 font-family: Amaranth
                 float: left
+                margin-top: 4px
         .nav-block
             float: left
             width: 50%
@@ -55,7 +57,8 @@ header
                     color: $header-link-color
                     &:hover
                         color: transparentize($header-hover-color, 0)
-        
+                a:first-child
+                    padding-left: 0 !important
         @include media(em(700))
             ul
                 display: inline-block !important

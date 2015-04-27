@@ -1,0 +1,23 @@
+---
+title: blog
+heading: 'My Website!'
+lead: Jason Tran
+---
+
+<div class="intro-text">
+    &nbsp;
+</div>
+<div class="front-page-content">
+    {{#withSort post 'data.posted'}}
+    {{#each this.pages}}
+        <div class="blog-post">
+            <div class="dates">
+                <span class="small-caps date">{{moment this.data.posted format="DD MMM YY" }}</span>
+            </div>
+            <div class="post-title">
+                <a class="blog-list" href="{{ replaceStr this.dest 'dist' ''}}" >{{this.data.title}}</a>
+            </div>
+        </div>
+    {{/each}}
+    {{/withSort}}
+</div>

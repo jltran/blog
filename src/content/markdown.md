@@ -1,3 +1,12 @@
+---
+title: "Markdown and the past"
+posted: 2014-01-28
+post: true
+layout: post.hbs
+image: "sunset.jpg"
+---
+
+
 [test]: http://google.com/ "Google"
 
 # A heading

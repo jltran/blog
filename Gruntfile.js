@@ -51,6 +51,21 @@ module.exports = function(grunt) {
         dest: '<%= config.dist %>/assets/js/app.js'
       }
     },
+      
+    imagemin: {
+      jpg: {
+        options: {
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>/assets/images/',
+          src: ['*.jpg'],
+          dest: '<%= config.dist %>/assets/images/',
+          ext: '.jpg'
+          }]
+      }
+    },
 
     uglify: {
       app: {
@@ -60,18 +75,33 @@ module.exports = function(grunt) {
     },
 
     assemble: {
-      pages: {
-        options: {
-          flatten: true,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/templates/layouts/default.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs'
-        },
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
-      }
+      options: {
+        assets: '<%= config.dist %>/assets', 
+        data: '<%= config.src %>/data/*.{json,yml}',
+        flatten: true,
+        helpers: '<%= config.src %>/templates/helpers/*.js',
+        layout: 'default.hbs',
+        layoutdir: '<%= config.src %>/templates/layouts',
+        partials: '<%= config.src %>/templates/partials/*.hbs',
+        collections: [{
+          name: 'post',
+          sortby: 'posted',
+          sortorder: 'descending'
+        }]
+      },
+      posts: {
+        files: [{
+          cwd: '<%= config.src %>/templates/site/',
+          dest: '<%= config.dist %>',
+          expand: true,
+          src: '*.hbs'
+        }, {
+          cwd: '<%= config.src %>/content/',
+          dest: '<%= config.dist %>/blog/',
+          expand: true,
+          src: '*.md'
+        }]
+      },
     },
       
     watch: {
@@ -136,6 +166,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');    
 
   grunt.registerTask('serve', [
     'clean',
@@ -152,7 +183,8 @@ module.exports = function(grunt) {
     'sass',
     'concat',
     'uglify',
-    'cssmin'
+    'cssmin',
+    'imagemin'
   ]);
 
   grunt.registerTask('default', [

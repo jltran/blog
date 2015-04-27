@@ -1,0 +1,32 @@
+{{>_site-head}}
+  <body>
+    {{> _header}}
+    <main id="main" role="main">
+        
+        <div class="content">
+          <div class="page-content">
+          <div class="title-content">
+            {{#if image}}
+            <div class="hero-container">
+               <h1>{{this.title}}</h1>
+                <div style="background-image: url('{{assets}}/images/{{this.image}}'); background-size: cover;" class="hero-picture"></div>
+            </div>
+            {{else}}
+            <h1 style="color:#333; margin-left:0.5em;">{{this.title}}</h1>
+            {{/if}}
+
+            
+            <span class="small-caps">Posted {{moment this.posted fromNow=true}} ago</span>
+          </div>
+          <div class="post">
+            {{#markdown}}
+              {{> body }}
+            {{/markdown}}      
+          </div>
+          </div>
+        </div>
+    </main>
+
+  <script src="{{assets}}/js/app.js"></script>
+  </body>
+</html>

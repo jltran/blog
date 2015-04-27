@@ -154,7 +154,7 @@ input[type="submit"] {
   border-radius: 3px;
   color: white;
   display: inline-block;
-  font-size: 1em;
+  font-size: 0.875em;
   font-weight: bold;
   line-height: 1;
   padding: 0.75em 1em;
@@ -173,8 +173,8 @@ body {
   background-color: white;
   color: #333;
   font-family: "PT Sans", sans-serif;
-  font-size: 1em;
-  line-height: 1.5; }
+  font-size: 0.875em;
+  line-height: 1.857; }
 
 h1,
 h2,
@@ -182,32 +182,58 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Titillium Web", sans-serif;
   line-height: 1.25;
   margin: 0;
   text-rendering: optimizeLegibility; }
 
+h1, h3, h5, h6 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400; }
+
+h2, h4 {
+  font-family: "PT Sans", sans-serif; }
+
 h1 {
-  font-size: 2.25em; }
+  font-size: 1.75em;
+  margin-bottom: 0.6em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1.225em;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin-bottom: 1.2em; }
 
 h3 {
-  font-size: 1.75em; }
+  font-size: 0.875em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  margin-bottom: 0.5em; }
 
 h4 {
-  font-size: 1.5em; }
+  font-size: 1.3125em; }
 
 h5 {
-  font-size: 1.25em; }
+  font-size: 1.09375em; }
 
 h6 {
-  font-size: 1em; }
+  font-size: 0.875em; }
 
 p {
-  margin: 0 0 0.75em; }
+  margin: 0 0 0.9285em;
+  letter-spacing: 1; }
+  p span {
+    font-weight: 600;
+    font-size: .8em;
+    text-transform: uppercase; }
 
+/*
+.date{
+  color: transparentize($base-font-color, .3);
+  font-size: .8em;
+  margin-bottom: .5em;
+}
+*/
 a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
@@ -220,12 +246,25 @@ a {
     color: #2c5999;
     outline: none; }
 
+a.read-more {
+  display: inline-block;
+  font-weight: 700;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-left: .2em;
+  position: relative; }
+  a.read-more span {
+    position: absolute;
+    font-size: 1.7em;
+    top: -2px;
+    right: -10px; }
+
 hr {
   border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: 1.5em 0; }
+  margin: 1.857em 0; }
 
 img,
 picture {
@@ -235,8 +274,8 @@ picture {
 blockquote {
   border-left: 2px solid #DDD;
   color: #595959;
-  margin: 1.5em 0;
-  padding-left: 0.75em; }
+  margin: 1.857em 0;
+  padding-left: 0.9285em; }
 
 cite {
   color: #737373;
@@ -244,22 +283,44 @@ cite {
   cite:before {
     content: "\2014 \00A0"; }
 
+.small-caps {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: "Titillium Web", sans-serif;
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+  padding: .1em 0;
+  text-align: left;
+  text-transform: uppercase; }
+
+code {
+  white-space: nowrap;
+  font-family: monaco;
+  background: #F7F7F7;
+  border: 1px solid #E0E0E0;
+  border-radius: 4.5px;
+  padding: .1em .4em;
+  font-size: .65em;
+  font-style: normal; }
+
 fieldset {
   background: #f7f7f7;
   border: 1px solid #DDD;
-  margin: 0 0 0.75em 0;
-  padding: 1.5em; }
+  margin: 0 0 0.9285em 0;
+  padding: 1.857em; }
 
 input,
 label,
 select {
   display: block;
   font-family: "PT Sans", sans-serif;
-  font-size: 1em; }
+  font-size: 0.875em; }
 
 label {
   font-weight: bold;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.46425em; }
   label.required:after {
     content: "*"; }
   label abbr {
@@ -279,9 +340,9 @@ select[multiple=multiple] {
   border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "PT Sans", sans-serif;
-  font-size: 1em;
-  margin-bottom: 0.75em;
-  padding: 0.5em 0.5em;
+  font-size: 0.875em;
+  margin-bottom: 0.9285em;
+  padding: 0.619em 0.619em;
   width: 100%; }
   textarea:hover,
   input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
@@ -307,32 +368,32 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: 0.375em; }
+  margin-right: 0.46425em; }
 
 input[type="file"] {
-  padding-bottom: 0.75em;
+  padding-bottom: 0.9285em;
   width: 100%; }
 
 select {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.857em;
   max-width: 100%;
   width: auto; }
 
 table {
   border-collapse: collapse;
-  margin: 0.75em 0;
+  margin: 0.9285em 0;
   table-layout: fixed;
   width: 100%; }
 
 th {
   border-bottom: 1px solid #b7b7b7;
   font-weight: bold;
-  padding: 0.75em 0;
+  padding: 0.9285em 0;
   text-align: left; }
 
 td {
   border-bottom: 1px solid #DDD;
-  padding: 0.75em 0; }
+  padding: 0.9285em 0; }
 
 tr,
 td,
@@ -345,10 +406,10 @@ ol {
   padding: 0;
   list-style-type: none; }
 dl {
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.9285em; }
   dl dt {
     font-weight: bold;
-    margin-top: 0.75em; }
+    margin-top: 0.9285em; }
   dl dd {
     margin: 0; }
 
@@ -379,114 +440,17 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-article.type-system-sans {
-  text-align: left; }
-  article.type-system-sans:after {
-    content: "";
-    display: table;
-    clear: both; }
-  article.type-system-sans .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: "Titillium Web", sans-serif;
-    font-size: 0.7em;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 2em;
-    padding: 0.1em 0;
-    text-align: left;
-    text-transform: uppercase; }
-  article.type-system-sans h1 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 0.6em; }
-    @media screen and (min-width: 40em) {
-      article.type-system-sans h1 {
-        font-size: 2.4em; } }
-  article.type-system-sans h2 {
-    font-family: "PT Sans", sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.4em;
-    margin-bottom: 1.2em; }
-    @media screen and (min-width: 40em) {
-      article.type-system-sans h2 {
-        font-size: 1.4em; } }
-  article.type-system-sans code {
-    white-space: nowrap;
-    font-family: monaco;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: 4.5px;
-    padding: 0.1em 0.4em;
-    font-size: 0.65em;
-    font-style: normal; }
-  article.type-system-sans h3 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.4em;
-    margin-bottom: 0.5em; }
-  article.type-system-sans p.date {
-    color: rgba(51, 51, 51, 0.4);
-    font-family: "PT Sans", sans-serif;
-    font-size: 0.8em;
-    margin-bottom: 0.5em; }
-  article.type-system-sans p {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 300;
-    letter-spacing: 1;
-    margin-bottom: 1.5em; }
-    article.type-system-sans p span {
-      font-family: "PT Sans", sans-serif;
-      font-weight: 600;
-      font-size: 0.8em;
-      text-transform: uppercase; }
-  article.type-system-sans hr {
-    width: 3em; }
-  article.type-system-sans a.read-more {
-    display: inline-block;
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    margin-left: 0.2em;
-    position: relative; }
-    article.type-system-sans a.read-more span {
-      position: absolute;
-      font-size: 1.7em;
-      top: -2px;
-      right: -10px; }
-  article.type-system-sans p.author {
-    font-family: "PT Sans", sans-serif;
-    font-style: italic; }
-
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit; }
-
 header {
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 0.1px 0.2px 0 rgba(102, 102, 102, 0.8);
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
   top: 0;
   left: 0;
   right: 0;
-  height: 3em;
+  height: 2.7855em;
   z-index: 800; }
   header .top-header {
-    width: 90%;
+    width: 80%;
     height: 100%;
     margin: 0 auto; }
     header .top-header .logo-block {
@@ -496,7 +460,8 @@ header {
       header .top-header .logo-block #logo a {
         display: block;
         font-family: Amaranth;
-        float: left; }
+        float: left;
+        margin-top: 4px; }
     header .top-header .nav-block {
       float: left;
       width: 50%;
@@ -524,6 +489,8 @@ header {
           color: rgba(102, 102, 102, 0.8); }
           header .top-header .nav-block nav a:hover {
             color: rgba(230, 81, 0, 0.6); }
+        header .top-header .nav-block nav a:first-child {
+          padding-left: 0 !important; }
     @media screen and (min-width: 43.75em) {
       header .top-header ul {
         display: inline-block !important; }
@@ -551,6 +518,10 @@ html {
   border-top: 1px solid rgba(109, 110, 113, 0.25);
   /* FOOTER BOX MODEL ================================= */
   /* FOOTER BLOCK STYLINGS ============================= */ }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
   .footer .footer-links {
     width: 90%;
     margin: 0 auto; }
@@ -560,7 +531,7 @@ html {
       clear: both; }
   .footer .footer-block {
     float: left;
-    padding: 1.5em 1em 1.5em;
+    padding: 1.857em 1em 1.857em;
     width: 100%; }
   @media screen and (min-width: 40em) {
     .footer .contact-info, .footer .narcissism {
@@ -569,16 +540,16 @@ html {
       width: 33.33%; } }
   @media screen and (min-width: 81.25em) {
     .footer .footer-block {
-      padding: 3em 1.5em 3em 2em; }
+      padding: 3.714em 1.5em 3.714em 2em; }
     .footer .footer-block:first-child {
-      padding: 3em 0 3em 2em; }
+      padding: 3.714em 0 3.714em 2em; }
     .footer .contact-info, .footer .project {
       width: 25%; }
     .footer .narcissism {
       width: 35%; }
     .footer .social {
       width: 15%; } }
-  .footer .footer-block h3 {
+  .footer .footer-block h4 {
     color: #888888;
     font-size: 1em;
     font-weight: 800;
@@ -605,5 +576,114 @@ html {
   @media screen and (min-width: 40em) {
     .footer .narcissism p {
       width: 66%; } }
+
+main {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto; }
+
+.content {
+  margin-top: 4.5em;
+  padding-top: 1px;
+  min-height: 500px; }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.intro-text {
+  width: 30%;
+  float: left;
+  display: none; }
+
+.front-page-content {
+  width: 100%;
+  float: left; }
+
+.blog-post:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.post-title {
+  width: 71.43%;
+  float: left;
+  margin-bottom: 1.4em; }
+
+.dates {
+  width: 28.57%;
+  float: left; }
+
+.date {
+  float: right;
+  margin-right: 2.9712em; }
+
+@media screen and (min-width: 40em) {
+  .intro-text {
+    display: block; }
+
+  .front-page-content {
+    width: 70%;
+    margin-top: 4.6425em;
+    margin-bottom: 1.857em; } }
+.hero-container {
+  margin-top: -10em;
+  width: 100%;
+  height: 20em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3; }
+  .hero-container h1 {
+    margin: 0.5em;
+    color: white;
+    z-index: 900;
+    position: absolute;
+    bottom: 0; }
+  @media screen and (min-width: 53.75em) {
+    .hero-container {
+      width: 66%;
+      height: 50em; } }
+
+.hero-picture {
+  min-height: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 10; }
+
+.hero-container:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%); }
+
+.title-content {
+  padding-top: 1px;
+  height: 100%; }
+  .title-content span {
+    margin-left: 1.2em; }
+  @media screen and (min-width: 53.75em) {
+    .title-content {
+      width: 50%;
+      float: left; } }
+
+.page-content {
+  margin-top: 1.857em;
+  height: 100%; }
+  .page-content:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+@media screen and (min-width: 53.75em) {
+  .post {
+    width: 50%;
+    float: left; } }
 
 /*# sourceMappingURL=main.css.map */

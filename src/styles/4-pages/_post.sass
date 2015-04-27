@@ -1,0 +1,53 @@
+.hero-container
+  margin-top: -10em    
+  width: 100%
+  height: 20em
+  position: relative
+  overflow: hidden
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3    
+  h1
+    margin: 0.5em
+    color: $base-background-color
+    z-index: 900
+    position: absolute
+    bottom: 0
+  @include media($large-screen)
+    width: 66%
+    height: 50em
+    
+        
+.hero-picture
+  min-height: 100%
+  min-width: 100%
+  background-repeat: no-repeat
+  background-position: center center
+  z-index: 10
+
+.hero-container:before
+  content: " "
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 11
+  top: 0
+  left: 0
+  @include linear-gradient(to bottom, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.5) 100%)  
+
+.title-content
+  padding-top: 1px
+  height: 100%
+  span
+    margin-left: 1.2em
+  @include media($large-screen)
+    width: 50%
+    float: left
+
+.page-content
+  @include clearfix
+  margin-top: $base-spacing
+  height: 100%
+
+.post
+  @include media($large-screen)
+    width: 50%
+    float: left

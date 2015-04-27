@@ -3,14 +3,26 @@
     {
      "order": 1,
      "id": "1",
-     "label": "Link1",
-     "link": "#"
+     "label": "blog",
+     "link": "/"
     },
     {
      "order": 2,
      "id": "2",
-     "label": "Link2",
-     "link": "#"
+     "label": "work",
+     "link": "/work.html"
+    },
+    {
+     "order": 3,
+     "id": "3",
+     "label": "data",
+     "link": "/data.html"
+    },
+    {
+     "order": 4,
+     "id": "4",
+     "label": "about",
+     "link": "/about.html"
     }
   ]
 }

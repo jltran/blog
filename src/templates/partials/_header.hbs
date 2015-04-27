@@ -1,7 +1,7 @@
 <header>
   <div class="top-header">
         <div class="logo-block">
-            <h1 id="logo"><a href="#" title="Back to home page">JLT</a></h1>
+            <h1 id="logo"><a href="/" title="Back to home page">JLT</a></h1>
         </div>
         <div class="nav-block">
             <ul class="social-media">
@@ -12,10 +12,9 @@
             </ul>
 
             <nav>
-                <a href="#">blog</a>
-                <a href="#">work</a>
-                <a href="#">data</a>
-                <a href="#">about</a>
+                {{#each navigation.main-nav}}
+                  <a href="{{this.link}}">{{this.label}}</a>
+                {{/each}}
             </nav>
         </div>
   </div>

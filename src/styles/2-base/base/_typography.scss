@@ -13,22 +13,38 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
+h1, h3, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: 400;
+}
+
+h2, h4 {
+  font-family: $base-font-family;
+}
+
 h1 {
   font-size: $h1-font-size;
+  margin-bottom: 0.6em;
 }
 
 h2 {
   font-size: $h2-font-size;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin-bottom: 1.2em;
 }
 
 h3 {
   font-size: $h3-font-size;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
@@ -45,7 +61,24 @@ h6 {
 
 p {
   margin: 0 0 ($base-spacing / 2);
+  letter-spacing: 1;
+
+  span {
+    font-weight: 600;
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+
+
 }
+
+/*
+.date{
+  color: transparentize($base-font-color, .3);
+  font-size: .8em;
+  margin-bottom: .5em;
+}
+*/
 
 a {
   @include transition(color 0.1s linear);
@@ -61,6 +94,21 @@ a {
     outline: none;
   }
 }
+
+a.read-more { 
+    display: inline-block;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+      span {
+        position: absolute;
+        font-size: 1.7em;
+        top: -2px;
+        right: -10px;
+      }
+  }
 
 hr {
   border-bottom: $base-border;
@@ -90,4 +138,28 @@ cite {
   &:before {
     content: "\2014 \00A0";
   }
+}
+
+.small-caps {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: $accent-font;
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+  padding: .1em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .65em;
+    font-style: normal;
 }
