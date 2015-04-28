@@ -96,8 +96,13 @@ module.exports = function(grunt) {
           expand: true,
           src: '*.hbs'
         }, {
-          cwd: '<%= config.src %>/content/',
+          cwd: '<%= config.src %>/content/blog',
           dest: '<%= config.dist %>/blog/',
+          expand: true,
+          src: '*.md'
+        }, {
+          cwd: '<%= config.src %>/content/project',
+          dest: '<%= config.dist %>/project/',
           expand: true,
           src: '*.md'
         }]

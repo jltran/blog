@@ -3,4 +3,17 @@ title: work
 lead: Jason Tran
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi natus eaque veritatis voluptatibus sequi cumque, atque ipsa, et adipisci accusamus dicta amet, eius, numquam pariatur porro hic vero. Doloribus praesentium consectetur laborum, blanditiis totam optio, aspernatur. A quasi odio, possimus autem eligendi totam quas at, aspernatur necessitatibus officia, veniam pariatur facilis quam nihil nesciunt ab reprehenderit ipsum commodi nobis repudiandae laudantium ea! Temporibus laborum dolor quisquam suscipit doloribus deleniti ipsum tempora accusamus neque cumque beatae cum praesentium, molestias magni harum cupiditate officiis maiores soluta corporis dolorem minus? Expedita, eveniet? Quo non debitis doloribus beatae laboriosam ratione suscipit facere deleniti sunt nesciunt placeat veniam minus, accusamus ex, nemo cum repellat optio modi nostrum. Soluta eius at veniam accusantium perferendis, officiis blanditiis esse quos aperiam, quasi tenetur neque! Explicabo id quasi earum necessitatibus est nisi, architecto et maxime blanditiis fugit porro, eos cumque, nemo! Aspernatur officiis, vitae quae nam nesciunt laboriosam repellat.
+<div class="entire-page">
+    <div class="work-grid">
+           {{#each projects.work-proj}}
+            <a href="{{this.link}}">
+                <div class="project-box" style="background-image: url('../assets/images/{{this.image}}'); background-size: cover;">
+                    <div class="project-content">
+                        <h4>{{this.label}}</h4>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+    </div>
+    
+</div>

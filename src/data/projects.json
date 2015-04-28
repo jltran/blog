@@ -1,19 +1,19 @@
 {
-  "keypoints-home": [
+  "work-proj": [
     {
      "order": 1,
      "id": "1",
-     "label": "Ricerca",
-     "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
-     "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
+     "label": "Scheduler",
+     "link": "/project/berkeleybuildscapacity.html",
+     "image": "bbc.png",
+     "excerpt": "This is placeholder"
     },
     {
      "order": 2,
      "id": "2",
-     "label": "Progettazione",
-     "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
+     "label": "Mobile Splash",
+     "link": "/project/kanshu.html",
+     "image": "kanshu.png",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
     },
     {
@@ -21,7 +21,7 @@
      "id": "3",
      "label": "Valutazione",
      "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "placeholder.gif",
+     "image": "bridge.jpg",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
     }
   ]
