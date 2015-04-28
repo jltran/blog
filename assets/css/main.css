@@ -569,7 +569,6 @@ html {
     max-width: 100px;
     max-height: 100px;
     border-radius: 5px 40px 5px;
-    margin-left: 15px;
     border: 1px solid rgba(109, 110, 113, 0.25);
     margin-top: -1.5em;
     opacity: 0.9; }
@@ -584,8 +583,7 @@ main {
 
 .content {
   margin-top: 4.5em;
-  padding-top: 1px;
-  min-height: 500px; }
+  padding-top: 1px; }
   .content:after {
     content: "";
     display: table;
@@ -595,6 +593,10 @@ main {
   width: 30%;
   float: left;
   display: none; }
+
+.entire-page {
+  width: 100%;
+  float: left; }
 
 .front-page-content {
   width: 100%;
@@ -624,7 +626,7 @@ main {
 
   .front-page-content {
     width: 70%;
-    margin-top: 4.6425em;
+    margin-top: 1.857em;
     margin-bottom: 1.857em; } }
 .hero-container {
   margin-top: -10em;
@@ -685,5 +687,44 @@ main {
   .post {
     width: 50%;
     float: left; } }
+
+.work-grid {
+  width: 100%;
+  float: right; }
+
+.project-box {
+  width: 90%;
+  margin: 5% 10% 5% 0px;
+  float: left;
+  border: 1px solid #888888;
+  position: relative;
+  overflow: hidden; }
+  @media screen and (min-width: 53.75em) {
+    .project-box {
+      width: 45%;
+      margin: 2.5% 5% 2.5% 0px; } }
+  .project-box h4 {
+    margin: 0.5em;
+    color: white;
+    z-index: 900;
+    position: absolute;
+    bottom: 0; }
+
+.project-content:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.5) 100%); }
+
+@media screen and (min-width: 40em) {
+  .work-grid {
+    width: 50%;
+    margin-bottom: 1.857em; } }
 
 /*# sourceMappingURL=main.css.map */
