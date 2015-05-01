@@ -9,6 +9,8 @@ image: "kanshu.png"
 
 I used jekyll to get the site up and running and bourbon/neat for the front-end. The main benefit of Bourbon is it forces cross-platform support on whatever you build so you don't have to worry about IE-8 as much. However, with autoprefixer, a library like Bourbon is less necessary. It was, however, nice to have some presets that you don't have to rebuild. I really enjoyed using the grid system in Bourbon for some reason.
 
+As always, code can be viewed on [github](https://github.com/jltran/kanshu)
+
 Click the image to visit the site!
 
 [![]({{assets}}/images/kanshu.png)](http://jltran.github.io/kanshu/)

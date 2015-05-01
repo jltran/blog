@@ -12,6 +12,8 @@ I wanted to use AngularJS for the framework and Firebase (a backend as a service
 ####Features
 We needed several authentication levels: admin, counselors and outreach workers. The admin could assign levels and counselors and outreach workers could sign up for outreaches as well as create outreaches.
 
+As always, code can be viewed on [github](https://github.com/jltran/bbc)
+
 Click on the image below to visit a mirror of the site:
 
 [![]({{assets}}/images/bbc.png)](https://bbc-calendar.firebaseapp.com/)
