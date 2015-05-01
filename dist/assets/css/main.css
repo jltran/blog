@@ -516,6 +516,10 @@ html {
 .footer {
   background: white;
   border-top: 1px solid rgba(109, 110, 113, 0.25);
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  margin-left: -10%;
   /* FOOTER BOX MODEL ================================= */
   /* FOOTER BLOCK STYLINGS ============================= */ }
   .footer:after {
@@ -719,8 +723,8 @@ main {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.5) 100%); }
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 60%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.2) 60%, rgba(0, 0, 0, 0.5) 100%); }
 
 @media screen and (min-width: 40em) {
   .work-grid {

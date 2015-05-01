@@ -1,7 +1,7 @@
 ---
 title: "images from github and the awesome octocats"
 posted: 2014-04-12
-post: true
+post: false
 layout: post.hbs
 image: "sea.jpg"
 ---

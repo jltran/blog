@@ -1,7 +1,7 @@
 ---
 title: "body and the corporeal form"
 posted: 2014-09-02
-post: true
+post: false
 layout: post.hbs
 image: "street.jpg"
 ---

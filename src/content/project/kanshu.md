@@ -1,7 +1,15 @@
 ---
-title: "Kanshu"
-post: false
-layout: post.hbs
+title: "Project: Kanshu"
+posted: 2014-11-02
+post: true
+layout: project.hbs
 image: "kanshu.png"
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui error maxime numquam blanditiis voluptatibus, ea ipsa hic eligendi consequatur beatae cupiditate sit minus obcaecati id ratione magni veniam aperiam quaerat culpa quasi fuga, illum officia mollitia. Amet, aut? Sapiente voluptates eaque aspernatur esse quia hic, labore, laborum natus quo expedita possimus modi totam molestiae aliquid blanditiis atque soluta ut illum. Rem soluta quod dolore reiciendis consequatur voluptatibus fugiat voluptatum maxime, quasi error modi fugit nam quo ipsam totam, voluptate architecto impedit saepe. Quia laborum nihil at ipsum magni eius cumque repellat facilis impedit, fugiat numquam doloribus aliquid repellendus nisi rerum voluptatum in saepe minus? Eos, dolor. Cumque iusto officia ipsam, modi quaerat possimus, officiis minima accusantium ipsum quos aut repellendus voluptas voluptates laudantium. Ducimus saepe distinctio ea, excepturi iste earum soluta temporibus natus magnam odit minus molestiae. Molestias cupiditate repellat iste illum quo accusamus eveniet iusto ratione perferendis rem deserunt, adipisci. Saepe accusantium voluptatem earum quis tempora voluptas id assumenda ratione magni consequatur autem, enim debitis maiores. Sit debitis nemo impedit, vero dolores molestias repudiandae. Ratione aspernatur aliquid necessitatibus, sed, recusandae minima veniam nostrum cum soluta esse eaque aperiam nemo, cupiditate et. Est quam obcaecati quod doloribus natus facere voluptates quia, recusandae cum laboriosam provident nisi tempore facilis vel tenetur animi laborum minus accusamus officiis dolorum. Fugiat quos enim autem amet incidunt molestiae? Nobis explicabo dolor quis odio obcaecati optio delectus voluptates laboriosam, consectetur, vero illum harum fuga corrupti labore ex exercitationem ipsum necessitatibus esse. Dicta accusamus illo laudantium distinctio.
+[Kanshu](http://jltran.github.io/kanshu/) is a mobile/web app for learning chinese that I am helping with on github. I worked on creating a splash page - it doesn't currently have any marketing copy, just pieces put together different components of a splash page.
+
+I used jekyll to get the site up and running and bourbon/neat for the front-end. The main benefit of Bourbon is it forces cross-platform support on whatever you build so you don't have to worry about IE-8 as much. However, with autoprefixer, a library like Bourbon is less necessary. It was, however, nice to have some presets that you don't have to rebuild. I really enjoyed using the grid system in Bourbon for some reason.
+
+Click the image to visit the site!
+
+[![]({{assets}}/images/kanshu.png)](http://jltran.github.io/kanshu/)
+

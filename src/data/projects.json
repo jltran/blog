@@ -19,9 +19,9 @@
     {
      "order": 3,
      "id": "3",
-     "label": "Valutazione",
-     "link": "http://www.usertestlab.it/interna.asp?p=1",
-     "image": "bridge.jpg",
+     "label": "Erdos",
+     "link": "/project/erdos.html",
+     "image": "erdos/dashboard.png",
      "excerpt": "Con il nostro lavoro aiutiamo a comprendere le esperienze e i contesti d'uso, per condividere le ricerche e progettare i formati."
     }
   ]

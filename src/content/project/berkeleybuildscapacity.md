@@ -1,6 +1,17 @@
 ---
-title: "Berkeley Builds Capacity Scheduler"
-post: false
-layout: post.hbs
+title: "Project: Berkeley Builds Capacity Scheduler"
+post: true
+posted: 2015-01-06
+layout: project.hbs
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui error maxime numquam blanditiis voluptatibus, ea ipsa hic eligendi consequatur beatae cupiditate sit minus obcaecati id ratione magni veniam aperiam quaerat culpa quasi fuga, illum officia mollitia. Amet, aut? Sapiente voluptates eaque aspernatur esse quia hic, labore, laborum natus quo expedita possimus modi totam molestiae aliquid blanditiis atque soluta ut illum. Rem soluta quod dolore reiciendis consequatur voluptatibus fugiat voluptatum maxime, quasi error modi fugit nam quo ipsam totam, voluptate architecto impedit saepe. Quia laborum nihil at ipsum magni eius cumque repellat facilis impedit, fugiat numquam doloribus aliquid repellendus nisi rerum voluptatum in saepe minus? Eos, dolor. Cumque iusto officia ipsam, modi quaerat possimus, officiis minima accusantium ipsum quos aut repellendus voluptas voluptates laudantium. Ducimus saepe distinctio ea, excepturi iste earum soluta temporibus natus magnam odit minus molestiae. Molestias cupiditate repellat iste illum quo accusamus eveniet iusto ratione perferendis rem deserunt, adipisci. Saepe accusantium voluptatem earum quis tempora voluptas id assumenda ratione magni consequatur autem, enim debitis maiores. Sit debitis nemo impedit, vero dolores molestias repudiandae. Ratione aspernatur aliquid necessitatibus, sed, recusandae minima veniam nostrum cum soluta esse eaque aperiam nemo, cupiditate et. Est quam obcaecati quod doloribus natus facere voluptates quia, recusandae cum laboriosam provident nisi tempore facilis vel tenetur animi laborum minus accusamus officiis dolorum. Fugiat quos enim autem amet incidunt molestiae? Nobis explicabo dolor quis odio obcaecati optio delectus voluptates laboriosam, consectetur, vero illum harum fuga corrupti labore ex exercitationem ipsum necessitatibus esse. Dicta accusamus illo laudantium distinctio.
+This is a site I built to help schedule outreaches for my project Berkeley Bulids Capacity, which aims to reduce HIV incidence by providing HIV testing and counseling to at-risk populations throughout the East Bay. In order to do this, we train volunteers to be outreach workers and counselors to engage people on outreaches. We were using google calendar before, which proved effective but had some issues with permissions: people would randomly delete outreaches off their calendars resulting in headaches for us coordinators.
+
+####Technologies Used
+I wanted to use AngularJS for the framework and Firebase (a backend as a service) was a natural solution for the database. Since our usage would be low, it would be effectively free and comes with hosting as well! However, angular and firebase was sometimes frustrating to work with due to syncronicity issues (aka working with javascript promises). MaterializeCSS was used as the css framework - which caused a lot of problems as well because it's forms did not play nice with angular. Overall, I was impressed with the power of angular but because it abstracts away a lot of what it's doing, it can be annoying to figure out why something is breaking (heisenbug).
+
+####Features
+We needed several authentication levels: admin, counselors and outreach workers. The admin could assign levels and counselors and outreach workers could sign up for outreaches as well as create outreaches.
+
+Click on the image below to visit a mirror of the site:
+
+[![]({{assets}}/images/bbc.png)](https://bbc-calendar.firebaseapp.com/)

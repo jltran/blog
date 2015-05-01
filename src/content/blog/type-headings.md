@@ -1,7 +1,7 @@
 ---
 title: "headings things that work"
 posted: 2014-09-05
-post: true
+post: false
 layout: post.hbs
 image: "pelican.jpg"
 ---

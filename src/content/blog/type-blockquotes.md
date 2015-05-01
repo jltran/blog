@@ -1,7 +1,7 @@
 ---
 title: "blockquotes and what they look like"
 posted: 2014-09-01
-post: true
+post: false
 layout: post.hbs
 image: "whitetown.jpg"
 ---

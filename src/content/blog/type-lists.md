@@ -1,7 +1,7 @@
 ---
 title: "lists and things thta are used in the supermarket"
 posted: 2014-09-15
-post: true
+post: false
 layout: post.hbs
 image: "windmill.jpg"
 ---

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Markdown and the past | Jason L. Tran</title>
+    <title>Min-Heap Efficiency | Jason L. Tran</title>
 
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -49,8 +49,8 @@
           <div class="title-content">
             
             <div class="hero-container">
-               <h1>Markdown and the past</h1>
-                <div style="background-image: url('../assets/images/sunset.jpg'); background-size: cover;" class="hero-picture"></div>
+               <h1>Min-Heap Efficiency</h1>
+                <div style="background-image: url('../assets/images/alpine.jpg'); background-size: cover;" class="hero-picture"></div>
             </div>
             
 
@@ -58,61 +58,27 @@
             <span class="small-caps">Posted a year ago</span>
           </div>
           <div class="post">
-            <h1 id="a-heading">A heading</h1>
-<p>Just a note, I&#39;ve found that I can&#39;t test my markdown parser vs others.
-For example, both markdown.js and showdown code blocks in lists wrong. They&#39;re
-also completely <a href="http://google.com/" title="Google">inconsistent</a> with regards to paragraphs in list items.</p>
-<p>A link. Not anymore.</p>
-<aside>This will make me fail the test because
-markdown.js doesnt acknowledge arbitrary html blocks =/</aside>
+            <p><img src="http://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png" alt=""></p>
+<p>Heaps are one of my favorite data structures because it&#39;s such an innovative solution to a common problem: easily finding the maximum or minimum value of a list. For those who have not had the pleasure, a heap is a &quot;tree&quot;-like structure with each node having at most 2 children and all children must be less (or more for max-heap). The thing that I had forgotten was that creating the heap was O(n/2) because you only have to &quot;check&quot; half the nodes (the ones with children) and perform the following operation on them.</p>
+<pre>
+``` python
+  def heapify(self):
+    for x in reversed(xrange(1, (len(self.arr))/2)):
+      self.sink(x)
 
-<ul>
-<li><p>List Item 1</p>
-</li>
-<li><p>List Item 2</p>
-<ul>
-<li>New List Item 1
-Hi, this is a list item.</li>
-<li>New List Item 2
-Another item<pre><code>Code goes here.
-Lots of it...</code></pre>
-</li>
-<li>New List Item 3
-The last item</li>
-</ul>
-</li>
-<li><p>List Item 3
-The final item.</p>
-</li>
-<li><p>List Item 4
-The real final item.</p>
-</li>
-</ul>
-<p>Paragraph.</p>
-<blockquote>
-<ul>
-<li>bq Item 1</li>
-<li>bq Item 2<ul>
-<li>New bq Item 1</li>
-<li>New bq Item 2
-Text here</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<p>Another blockquote!
-I really need to get
-more creative with
-mockup text..
-markdown.js breaks here again</p>
-</blockquote>
-<h2 id="another-heading">Another Heading</h2>
-<p>Hello <em>world</em>. Here is a <a href="//hello">link</a>.
-And an image <img src="src" alt="alt">.</p>
-<pre><code>Code goes here.
-Lots of it...</code></pre>
+  def sink(self, k):
+    while 2*k <= len(self.arr) - 1:
+      j = 2*k
+      if j < (len(self.arr) - 1) and self.arr[j]>=self.arr[j+1]: 
+        j = j+1
+      if self.arr[k] <= self.arr[j]: break
+      self.exch(j, k)
+      k = j
+
+```
+</pre>
+
+
       
           </div>
           </div>

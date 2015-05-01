@@ -1,7 +1,7 @@
 ---
 title: "emphasis and what it does to people"
 posted: 2014-09-03
-post: true
+post: false
 layout: post.hbs
 image: "sunlight.jpg"
 ---
