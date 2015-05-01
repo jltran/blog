@@ -730,5 +730,7 @@ main {
   .work-grid {
     width: 50%;
     margin-bottom: 1.857em; } }
+embed {
+  height: 65vh; }
 
 /*# sourceMappingURL=main.css.map */
