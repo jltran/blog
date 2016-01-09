@@ -1,5 +1,5 @@
 ---
-title: "Project Management: Occupational Hazard Response Team"
+title: "Project: Occupational Hazard Response Team"
 posted: 2013-05-12
 post: true
 stub: Non-Profit

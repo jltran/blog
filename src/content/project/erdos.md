@@ -1,5 +1,5 @@
 ---
-title: "Web: Erdos - Article Review Site"
+title: "Project: Erdos - Article Review Site"
 post: true
 posted: 2015-04-29
 layout: project.hbs

@@ -1,5 +1,5 @@
 ---
-title: "Web: Kanshu - Simple splash page"
+title: "Project: Kanshu - Simple splash page"
 posted: 2014-11-02
 post: true
 layout: project.hbs
