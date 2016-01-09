@@ -1,7 +1,8 @@
 ---
 title: "Min-Heap Efficiency"
 posted: 2014-03-22
-post: true
+post: false
+stub: Biology
 layout: post.hbs
 image: "alpine.jpg"
 ---
@@ -14,11 +15,11 @@ Heaps are one of my favorite data structures because it's such an innovative sol
   def heapify(self):
     for x in reversed(xrange(1, (len(self.arr))/2)):
       self.sink(x)
-      
+
   def sink(self, k):
     while 2*k <= len(self.arr) - 1:
       j = 2*k
-      if j < (len(self.arr) - 1) and self.arr[j]>=self.arr[j+1]: 
+      if j < (len(self.arr) - 1) and self.arr[j]>=self.arr[j+1]:
         j = j+1
       if self.arr[k] <= self.arr[j]: break
       self.exch(j, k)
@@ -26,4 +27,3 @@ Heaps are one of my favorite data structures because it's such an innovative sol
 
 ```
 </pre>
-

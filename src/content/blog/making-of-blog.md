@@ -1,7 +1,8 @@
 ---
-title: "Making of this Blog"
+title: "Web: Making of this Blog"
 posted: 2013-12-08
 post: true
+stub: Web Development
 layout: post.hbs
 image: "windmill.jpg"
 ---

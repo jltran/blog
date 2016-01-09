@@ -1,7 +1,8 @@
 ---
-title: "Project: Berkeley Builds Capacity Scheduler"
+title: "Web: BBC Scheduler"
 post: true
 posted: 2015-01-06
+stub: Biology
 layout: project.hbs
 ---
 This is a site I built to help schedule outreaches for my project Berkeley Bulids Capacity, which aims to reduce HIV incidence by providing HIV testing and counseling to at-risk populations throughout the East Bay. In order to do this, we train volunteers to be outreach workers and counselors to engage people on outreaches. We were using google calendar before, which proved effective but had some issues with permissions: people would randomly delete outreaches off their calendars resulting in headaches for us coordinators.

@@ -2,6 +2,7 @@
 title: "images from github and the awesome octocats"
 posted: 2014-04-12
 post: false
+stub: Biology
 layout: post.hbs
 image: "sea.jpg"
 ---

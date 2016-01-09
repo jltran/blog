@@ -2,6 +2,7 @@
 title: "Partnership in Patient Care"
 posted: 2014-08-19
 post: false
+stub: Biology
 layout: post.hbs
 image: "connect.jpg"
 ---

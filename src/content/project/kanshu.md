@@ -1,8 +1,9 @@
 ---
-title: "Project: Kanshu"
+title: "Web: Kanshu - Simple splash page"
 posted: 2014-11-02
 post: true
 layout: project.hbs
+stub: Biology
 image: "kanshu.png"
 ---
 [Kanshu](http://jltran.github.io/kanshu/) is a mobile/web app for learning chinese that I am helping with on github. I worked on creating a splash page - it doesn't currently have any marketing copy, just pieces put together different components of a splash page.
@@ -14,4 +15,3 @@ As always, code can be viewed on [github](https://github.com/jltran/kanshu)
 Click the image to visit the site!
 
 [![]({{assets}}/images/kanshu.png)](http://jltran.github.io/kanshu/)
-

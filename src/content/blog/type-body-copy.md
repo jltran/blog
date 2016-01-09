@@ -1,6 +1,7 @@
 ---
 title: "body and the corporeal form"
 posted: 2014-09-02
+stub: Biology
 post: false
 layout: post.hbs
 image: "street.jpg"

@@ -1,7 +1,7 @@
 @import '../1-tools/bourbon/bourbon'
 @import '../1-tools/neat/neat'
 
-.footer 
+.footer
   $footer-background: white
   $footer-color: #888888
   $footer-link-color: transparentize($footer-color, .2)
@@ -14,13 +14,14 @@
   bottom: 0
   z-index: 100
   margin-left: -10%
-  
-  .footer-links 
+  max-height: 50px
+
+  .footer-links
     width: 90%
     margin: 0 auto
-    @include clearfix      
-        
-  /* FOOTER BOX MODEL ================================= */  
+    @include clearfix
+
+  /* FOOTER BOX MODEL ================================= */
   .footer-block
     float: left
     padding: $base-spacing 1em $base-spacing null
@@ -31,7 +32,7 @@
       width: 66.66%
     .project, .social
       width: 33.33%
-    
+
   @include media(em(1300))
     .footer-block
       padding: $base-spacing*2 1.5em $base-spacing*2 2em
@@ -43,8 +44,8 @@
       width: 35%
     .social
       width: 15%
-    
-  /* FOOTER BLOCK STYLINGS ============================= */    
+
+  /* FOOTER BLOCK STYLINGS ============================= */
   .footer-block h4
     color: $footer-color
     font-size: 1em
@@ -60,11 +61,11 @@
   li a
     &:hover
       color: $footer-hover-color
-    
+
   .narcissism p
     float: left
     width: 50%
-    
+
   .my-face
     float: left
     max-width: 100px
@@ -73,12 +74,7 @@
     border: 1px solid rgba(109, 110, 113, 0.25)
     margin-top: -1.5em
     opacity: 0.9
-    
+
   @include media($medium-screen)
     .narcissism p
       width: 66%
-      
-  
-
-
-  

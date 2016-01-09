@@ -1,8 +1,9 @@
 ---
-title: "Project: Erdos"
+title: "Web: Erdos - Article Review Site"
 post: true
 posted: 2015-04-29
 layout: project.hbs
+stub: Biology
 image: "erdos/dashboard.png"
 ---
 [Erdos](http://erdos.jason.lt) is a article publishing site that I wanted to build to learn Django. I already had a lot of experience scripting in python (my preferred language for data analysis) but I never used Django as a framework (although I have played around with flask and pelican). Django is very similar to rails in it's preference for "convention over configuration" making it more difficult to learn - since you don't know the convention, but I found the process relatively painless using [djangogirls](http://djangogirls.org/) and [rango](http://www.tangowithdjango.com/) for guidance.

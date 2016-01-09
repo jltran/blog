@@ -1,7 +1,8 @@
 ---
-title: "White Text Over Pictures"
+title: "CSS: White Text Over Pictures"
 posted: 2014-01-28
 post: true
+stub: Biology
 layout: post.hbs
 image: "whitetown.jpg"
 ---

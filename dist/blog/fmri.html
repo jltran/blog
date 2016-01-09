@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biology: Determining Cognitive States Using fMRI Data | Jason L. Tran</title>
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amaranth:400&text=JLT' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+  <div class="top-header">
+        <div class="logo-block">
+            <h1 id="logo"><a href="/" title="Back to home page">JLT</a></h1>
+        </div>
+        <div class="nav-block">
+            <ul class="social-media">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+
+            <nav>
+                
+                  <a href="/">work</a>
+                
+                  <a href="/resume.html">resume</a>
+                
+            </nav>
+        </div>
+  </div>
+</header>
+    <main id="main" role="main">
+        
+        <div class="content">
+          <div class="page-content">
+          <div class="title-content">
+            
+            <h1 style="color:#333; margin-left:0.5em;">Biology: Determining Cognitive States Using fMRI Data</h1>
+            
+
+            
+            <span class="small-caps">Posted 7 days ago</span>
+          </div>
+          <div class="post">
+            <p>Data Source: <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/"><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/">http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/</a></a></p>
+<p>In this post, we reproduce the analysis of fMRI data to see if we can determine the cognitive state of a subject when they are either viewing (1) a sentence or (2) a picture. fMRI snapshots were taken and the activity of 4698 voxels (3D pixels) were used as columns for analysis. Naive bayes was used for analysis. Although individual snapshots are not independent, prediction using trained model yielded an accuracy of 0.94871. Below are the aggregated values of snapshots labelled as &#39;Picture&#39; or &#39;Sentence&#39;.</p>
+<p>Picture Viewed by Subject<br><img src="../assets/images/BrainsP.png" alt=""></p>
+<p>Sentence Viewed by Subject<br><img src="../assets/images/BrainS.png" alt=""></p>
+<pre>
+#Imports used
+from scipy.io import loadmat
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+from sklearn.naive_bayes import GaussianNB
+</pre>
+
+<pre>
+#Read in Data
+ids = ['04820']
+total_data = []
+
+data = loadmat('data-starplus-' + ids[0] + '-v7.mat')
+meta = data['meta'][0][0]
+info = data['info'][0]
+
+colToCoord = meta[0]
+
+labeled_data = []
+for trial in xrange(meta[6]):
+    #Ignore rest periods in data
+    if info[trial][0][0][0] in [2, 3]:
+        #Determine whether trial started with a picture or sentence
+        testType = info[trial][13][0]
+        voxes = data['data'][trial][0]
+        for i in xrange(len(voxes)):
+            if i/10 == 0:
+                labeled_data.append((voxes[i], testType))
+total_data = total_data + labeled_data
+
+X = pd.DataFrame(map(lambda x: x[0], total_data))
+y = np.array(map(lambda x: x[1], total_data))
+</pre>
+
+<pre>
+#Create Test Data
+mask = np.random.rand(len(y)) < 0.8
+
+X_train = X[mask]
+X_test = X[~mask]
+y_train = y[mask]
+y_test = y[~mask]
+</pre>
+
+<pre>
+#Run Naive Bayes
+gnb = GaussianNB()
+y_pred = gnb.fit(X_train, y_train).predict(X_test)
+print sum(y_pred == y_test)/float(len(y_test))
+</pre>
+
+<pre>
+def recreateImages(temp_image, layer):
+    img = np.zeros((64, 64))
+    snap = temp_image
+
+    #Normalize image values
+    maxActiv = max(snap)
+    minActiv = min(snap)
+    snap = snap - minActiv
+    snap = (snap * 63/(maxActiv - minActiv)) + 1
+
+    for i in xrange(len(snap)):
+        coords = colToCoord[i]
+        if coords[2] == layer:
+            img[coords[0]][coords[1]] = snap[i]
+
+    plt.imshow(img, cmap='jet')
+    plt.axis('off')
+
+translation = {'P': 'Picture Shown', 'S': 'Sentence Shown'}
+for i in ['P', 'S']:
+    to_img = X_test[y_pred == i]
+    plt.figure(figsize = (6, 6))
+    for j in xrange(1, 9):
+        loc = '33' + str(j)
+        plt.subplot(loc)
+        recreateImages(to_img.mean(axis=0), j)
+    #Add colorbar
+    plt.subplot('339')
+    plt.axis('off')
+    plt.colorbar()
+
+    plt.tight_layout()
+    plt.show()
+</pre>
+
+      
+          </div>
+          </div>
+        </div>
+    </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+  </body>
+</html>
