@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web: Making of this Blog | Jason L. Tran</title>
+    <title>Visualization: Antibiotics | Jason L. Tran</title>
 
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -45,21 +45,82 @@
           <div class="page-content">
           <div class="title-content">
             
-            <div class="hero-container">
-               <h1>Web: Making of this Blog</h1>
-                <div style="background-image: url('../assets/images/windmill.jpg'); background-size: cover;" class="hero-picture"></div>
-            </div>
+            <h1 style="color:#333; margin-left:0.5em;">Visualization: Antibiotics</h1>
             
 
             
-            <span class="small-caps">Posted 2 years ago</span>
+            <span class="small-caps">Posted 2 months ago</span>
           </div>
           <div class="post">
-            <p>My previous blogs had been built on pelican &amp; jekyll and I wanted to try something different on the &quot;back-end&quot; as well while keeping it as a static site generator and found <a href="http://assemble.io">assemble.io</a>, a node.js static site generator.</p>
-<h4 id="assemble">Assemble</h4>
-<p>I was not very impressed with assemble. It&#39;s support less limited than jekyll (aka. getting less hits when looking on stack overflow). It has some nice handlebars templating but there were several things such as creating multiple collections that did not seem to be possible. Some things I did like, however: it comes with grunt built in so I didn&#39;t have to do much customization there to get things working. Preprocessing scss in realtime and auto-reload was awesome.</p>
-<h4 id="front-end">Front-End</h4>
-<p>On the front-end I wanted to try creating something less rigid so I decided to roll my own site using scss. Not using a grid system and instead using percentages was interesting and sometimes extremely frustrating. I&#39;m glad that we have frameworks that abstract away some of the pecularities of css and the current state of browsers. Autoprefixer in grunt helps maintain cross-browser support really well.</p>
+            <style>
+    svg {
+      font: 10px sans-serif;
+    }
+
+    .page-content .post {
+      width: 100%;
+    }
+
+    .background path {
+      fill: none;
+      stroke: none;
+      stroke-width: 20px;
+      pointer-events: stroke;
+    }
+
+    .foreground path {
+      fill: none;
+      stroke-width: 1.5px;
+      stroke-opacity: .75;
+    }
+
+    .axis .title {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .axis line,
+    .axis path {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .label {
+      -webkit-transition: fill 125ms linear;
+    }
+
+    .active .label:not(.inactive) {
+      font-weight: bold;
+    }
+
+    .label.inactive {
+      fill: #ccc;
+    }
+
+    .foreground path.inactive {
+      stroke-opacity: .25;
+      stroke-width: 1px;
+    }
+
+    .x {
+      font-weight: bold;
+    }
+
+    .back{
+      position: absolute;
+      bottom: 0
+    }
+
+    .hide{
+      display: none;
+  }
+    </style>
+
+<p><div class="antibiotics"></div></p>
+<script type="text/javascript" src="../assets/js/d3/antibiotics.js"></script>
+
       
           </div>
           </div>

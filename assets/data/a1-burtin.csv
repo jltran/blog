@@ -1,0 +1,17 @@
+Bacteria,Penicillin,Streptomycin,Neomycin,Gram Staining,Most Effective
+Aerobacter aerogenes,870,1,1.6,negative,Penicillin
+Brucella abortus,1,2,0.02,negative,Streptomycin
+Brucella anthracis,0.001,0.01,0.007,positive,Streptomycin
+Diplococcus pneumoniae,0.005,11,10,positive,Streptomycin
+Escherichia coli,100,0.4,0.1,negative,Penicillin
+Klebsiella pneumoniae,850,1.2,1,negative,Penicillin
+Mycobacterium tuberculosis,800,5,2,negative,Penicillin
+Proteus vulgaris,3,0.1,0.1,negative,Penicillin
+Pseudomonas aeruginosa,850,2,0.4,negative,Penicillin
+Salmonella (Eberthella) typhosa,1,0.4,0.008,negative,Penicillin
+Salmonella schottmuelleri,10,0.8,0.09,negative,Penicillin
+Staphylococcus albus,0.007,0.1,0.001,positive,Streptomycin
+Staphylococcus aureus,0.03,0.03,0.001,positive,Streptomycin
+Streptococcus fecalis,1,1,0.1,positive,Streptomycin
+Streptococcus hemolyticus,0.001,14,10,positive,Streptomycin
+Streptococcus viridans,0.005,10,40,positive,Neomycin

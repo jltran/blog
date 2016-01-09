@@ -520,6 +520,7 @@ html {
   bottom: 0;
   z-index: 100;
   margin-left: -10%;
+  max-height: 50px;
   /* FOOTER BOX MODEL ================================= */
   /* FOOTER BLOCK STYLINGS ============================= */ }
   .footer:after {
